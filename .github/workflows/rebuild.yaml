@@ -8,6 +8,7 @@ jobs:
     runs-on: self-hosted
     env:
       IMAGE: debian-bullseye
+      REGISTRY: registry.k8s.pwagner.net/library
     steps:
       - uses: actions/checkout@v2
       - name: build
