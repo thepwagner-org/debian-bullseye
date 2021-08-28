@@ -4,7 +4,9 @@ on:
 jobs:
   test:
     runs-on: self-hosted
+    env:
+      IMAGE: debian-bullseye
     steps:
       - uses: actions/checkout@v2
-      - name: make build
-        run: make build
+      - name: build
+        run: docker build -t $IMAGE .
