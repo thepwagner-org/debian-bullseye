@@ -6,6 +6,7 @@ jobs:
     runs-on: self-hosted
     env:
       IMAGE: debian-bullseye
+      REGISTRY: registry.k8s.pwagner.net/library
     steps:
       - uses: actions/checkout@v2
       - name: build
@@ -13,7 +14,7 @@ jobs:
       - name: scan
         uses: aquasecurity/trivy-action@8eccb5539730451af599c84f444c6d6cf0fc2bb0
         with:
-          image-ref: ${{env.IMAGE}}'
+          image-ref: ${{env.IMAGE}}
           format: "table"
           exit-code: "1"
           ignore-unfixed: true
