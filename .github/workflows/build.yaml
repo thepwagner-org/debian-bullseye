@@ -1,0 +1,10 @@
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - name: make build
+        run: make build
