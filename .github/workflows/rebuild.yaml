@@ -12,4 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: build
-        run: docker build --no-cache -t $IMAGE .
+        run: docker build --no-cache -t "$REGISTRY/$IMAGE" .
+      - name: Scan
+        uses: aquasecurity/trivy-action@8eccb5539730451af599c84f444c6d6cf0fc2bb0
+        with:
+          image-ref: "${{env.REGISTRY}}/${{env.IMAGE}}"
+          format: "table"
+          exit-code: "1"
+          ignore-unfixed: true
+          vuln-type: "os,library"
+          severity: "CRITICAL,HIGH"
