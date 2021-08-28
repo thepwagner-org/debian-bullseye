@@ -12,14 +12,9 @@ jobs:
       - name: Build
         run: docker build -t "$REGISTRY/library/$IMAGE" .
       - name: Scan
-        uses: aquasecurity/trivy-action@8eccb5539730451af599c84f444c6d6cf0fc2bb0
+        uses: docker://registry.k8s.pwagner.net/library/trivy:latest
         with:
-          image-ref: "${{env.REGISTRY}}/library/${{env.IMAGE}}"
-          format: "table"
-          exit-code: "1"
-          ignore-unfixed: true
-          vuln-type: "os,library"
-          severity: "CRITICAL,HIGH"
+          args: "$REGISTRY/library/$IMAGE"
       - name: Login
         if: github.ref == 'refs/heads/main'
         uses: docker/login-action@v1
