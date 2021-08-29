@@ -14,7 +14,7 @@ jobs:
       - name: Scan
         uses: docker://registry.k8s.pwagner.net/library/trivy:latest
         with:
-          args: "$${{env.REGISTRY}}/library/$${{env.IMAGE}}"
+          args: "${{env.REGISTRY}}/library/${{env.IMAGE}}"
       - name: Login
         if: github.ref == 'refs/heads/main'
         uses: docker/login-action@v1
