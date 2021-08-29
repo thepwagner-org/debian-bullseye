@@ -1,6 +1,7 @@
 name: Build
 on:
   push:
+  workflow_dispatch:
 jobs:
   test:
     runs-on: self-hosted
