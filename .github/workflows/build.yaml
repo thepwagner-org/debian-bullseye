@@ -13,7 +13,7 @@ jobs:
       - name: Build
         run: docker build -t "$REGISTRY/library/$IMAGE" .
       - name: Scan
-        uses: docker://registry.k8s.pwagner.net/library/trivy:latest
+        uses: docker://registry.k8s.pwagner.net/library/trivy:latest@sha256:612efcc0468d64af645f47280565ed6e85113d112c47e14e4f6f396e23f67662
         with:
           args: "${{env.REGISTRY}}/library/${{env.IMAGE}}"
       - name: Login
