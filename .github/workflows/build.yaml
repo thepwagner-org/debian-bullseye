@@ -28,7 +28,7 @@ jobs:
       if: ${{github.ref == 'refs/heads/main'}}
       uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9 # renovate: tag=v1
       with:
-        registry: ${{env.REGISTRY}}
+        registry: registry.k8s.pwagner.net
         username: robot$github-actions
         password: ${{secrets.REGISTRY_K8S_PASSWORD}}
     - name: "🚢 Publish to registry"
