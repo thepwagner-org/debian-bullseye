@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim@sha256:dacf278785a4daa9de07596ec739dbc07131e189942772210709c5c0777e8437
+FROM debian:bullseye-slim@sha256:e3ed4be20c22a1358020358331d177aa2860632f25b21681d79204ace20455a6
 
 COPY proxy.conf /etc/apt/apt.conf.d/99proxy
 COPY sources.list /etc/apt/sources.list
