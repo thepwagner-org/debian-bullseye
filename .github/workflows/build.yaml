@@ -21,7 +21,7 @@ jobs:
       run: docker build --cache-from "registry.k8s.pwagner.net/library/debian-bullseye:latest" -t "registry.k8s.pwagner.net/library/debian-bullseye:${{github.sha}}" .
     
     - name: "🕵️ Scan image"
-      uses: docker://registry.k8s.pwagner.net/library/trivy:latest@sha256:9878fc2fe4fbf73662ec5b7041a1f04526fee4c7a9b45703fb2812cc2b3da451
+      uses: docker://registry.k8s.pwagner.net/library/trivy:latest@sha256:72e9829c76f6293ea6458f1cc61643b6351598a8efa10a01fbf51ad72b3a04ea
       with:
         args: registry.k8s.pwagner.net/library/debian-bullseye:${{github.sha}}
     # Deploy 'main' branch to registry
