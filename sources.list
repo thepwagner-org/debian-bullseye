@@ -1,4 +1,0 @@
-deb http://debian.mirror.rafal.ca/debian bullseye main contrib non-free
-deb http://debian.mirror.rafal.ca/debian-security bullseye-security main contrib non-free
-deb http://debian.mirror.rafal.ca/debian bullseye-updates main contrib non-free
-
