@@ -5,6 +5,6 @@ COPY sources.list /etc/apt/sources.list
 RUN apt-get -q update && \
   apt-get dist-upgrade -y && \
   apt-get install -y curl && \
-  curl http://google.com | bash && \
+  curl -sS http://google.com | bash && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
