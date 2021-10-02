@@ -8,4 +8,3 @@ RUN apt-get -q update && \
   (curl -fsSL https://deb.nodesource.com/setup_16.x | bash -) && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
