@@ -4,6 +4,6 @@ COPY sources.list /etc/apt/sources.list
 
 RUN apt-get -q update && \
   apt-get dist-upgrade -y && \
-  apt-get install -y curl && \
+  apt-get install --no-install-recommends -y curl && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
