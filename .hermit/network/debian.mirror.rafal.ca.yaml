@@ -1,0 +1,150 @@
+debian.mirror.rafal.ca/debian-security/dists/bullseye-security/InRelease:
+    statuscode: 200
+    contenttype: ""
+    contentlength: 44101
+    sha256: 982dd29ebb2f50da90b6a65c219e5db8207bad5aadd1ccefc26d696ad79f0c99
+    shake256: 094b849144fdb726bed04df8e9aff79959814eabc6b504e4b22400883d55dcd43caab71ff77043c33598167efdfcede3167eca8744edc467f1563e185051eefb
+? debian.mirror.rafal.ca/debian-security/dists/bullseye-security/main/binary-amd64/by-hash/SHA256/88602074042c9f5f527edb4aae20a78f3471688c6f8dab3618fc318cacf15079
+:   statuscode: 200
+    contenttype: ""
+    contentlength: 41000
+    sha256: 88602074042c9f5f527edb4aae20a78f3471688c6f8dab3618fc318cacf15079
+    shake256: c17611b41ab5012192fdbd257ae9af21096cc9a8a238e0e7a3e08594dca2f27f7a847028ce373158bdf288f521a46539e6f00fa2cc6b3df54559ba2139cb145a
+? debian.mirror.rafal.ca/debian-security/dists/bullseye-security/main/binary-amd64/by-hash/SHA256/da870dd76c3fec92c85f69be957e011f75a90f01c8e11f5e8a9ea666dce84853
+:   statuscode: 200
+    contenttype: ""
+    contentlength: 41508
+    sha256: da870dd76c3fec92c85f69be957e011f75a90f01c8e11f5e8a9ea666dce84853
+    shake256: 447661baa3de6c8033b1a4584597ee913d2f0f92a1307712aa2122dac69a9bf66459c690363b9dbad05789cc7fd3a15cc353ad57530833cec67964fc198fefef
+debian.mirror.rafal.ca/debian-security/pool/updates/main/o/openssl/openssl_1.1.1k-1+deb11u1_amd64.deb:
+    statuscode: 200
+    contenttype: application/x-debian-package
+    contentlength: 850888
+    sha256: ed998755dabb96ffe107c2d41ce685ecbb4fa200f7825ff82c1092f8334bf3cb
+    shake256: c7e76633cf3a4160b20539583db24514eb573d131d1d2e05dadb7e4145fbfc398e916a4f8e77f43324413333c40fca10032c8a740e46a42a8bcf17cbdd4fc9e0
+debian.mirror.rafal.ca/debian/dists/bullseye-updates/InRelease:
+    statuscode: 200
+    contenttype: ""
+    contentlength: 39353
+    sha256: 2b756a3bb59d8d3f2b603a38270b5f932e79d115dbbc6f142e376ff6ab351405
+    shake256: 605bfb637524b210b096b7a0125400bf49611c2672ebe4b326b46c2d67e0cc66bfede004d3cba272f219e8371bce4b7032b83fb4c88dc531a2a4a746c5829af6
+? debian.mirror.rafal.ca/debian/dists/bullseye-updates/main/binary-amd64/by-hash/SHA256/942f49679a50f19ca65a74ae199c161659d505b9aca8bdfa62dfe9af74d468fd
+:   statuscode: 200
+    contenttype: ""
+    contentlength: 2300
+    sha256: 942f49679a50f19ca65a74ae199c161659d505b9aca8bdfa62dfe9af74d468fd
+    shake256: bd22806234ab94e23aa1d03117b2a999085e5e891a447858517e46bcdaa2d854d5339b1fb1bf9a8a9010de9c191b6ec8dde6dcff3c5ab8c81a1f3dcf9c8dc9a4
+debian.mirror.rafal.ca/debian/dists/bullseye/InRelease:
+    statuscode: 200
+    contenttype: ""
+    contentlength: 112605
+    sha256: 25be8af75cbf61f842be3ade6818f2c058b020c61979fe38aa2989dc3947b1c5
+    shake256: 3936b3f945b2e284b2cdeeee174ad4907983671c9e2e8209853eb5d2f21f0816855fe244c27ad745f6e9a5184f1653d311286d18a75d94056550c7e517dc3175
+? debian.mirror.rafal.ca/debian/dists/bullseye/contrib/binary-amd64/by-hash/SHA256/ac91d71634f2a7b49e5de0d6415510d959c6f6290db649b06efa0d14c1b0f359
+:   statuscode: 200
+    contenttype: ""
+    contentlength: 50448
+    sha256: ac91d71634f2a7b49e5de0d6415510d959c6f6290db649b06efa0d14c1b0f359
+    shake256: fbdf33c897064512e6ad9c1485abe1bae0666d258f6790edb1196cb1f3d88be515201cbc0df021d6f85fef436edca9570d695f4a1bb381425d7856502cff5f45
+? debian.mirror.rafal.ca/debian/dists/bullseye/main/binary-amd64/by-hash/SHA256/2dd487cd20eabf2aaecb3371d26543cfaec0cc7e7dd0846f2aee6b79574374ad
+:   statuscode: 200
+    contenttype: ""
+    contentlength: 8177736
+    sha256: 2dd487cd20eabf2aaecb3371d26543cfaec0cc7e7dd0846f2aee6b79574374ad
+    shake256: be38eee5afd9198394c3c2dc35d401efa18ece9e6bf3f8a673eb57d24403faece35771ee7d64c98fde0ec1024b5af7aa3cae1c22274f63bc256e5914c82af80f
+? debian.mirror.rafal.ca/debian/dists/bullseye/non-free/binary-amd64/by-hash/SHA256/8193c44c1159df8a67b40d448049dbdef5382ff88c64247b3531d4ac3ff23292
+:   statuscode: 200
+    contenttype: ""
+    contentlength: 93776
+    sha256: 8193c44c1159df8a67b40d448049dbdef5382ff88c64247b3531d4ac3ff23292
+    shake256: baf7a0db9dac04077459bd8085390aa47c31ede77f0a7643a38441c3852826ca619634c2e15b4a0dae792ce15915129236f462ba2fddb7123ee8251d7239ea15
+debian.mirror.rafal.ca/debian/pool/main/b/brotli/libbrotli1_1.0.9-2+b2_amd64.deb:
+    statuscode: 200
+    contenttype: application/x-debian-package
+    contentlength: 278652
+    sha256: 65ca7d8b03e9dac09c5d544a89dd52d1aeb74f6a19583d32e4ff5f0c77624c24
+    shake256: 2621e942be62877b7380872f06847160354cca3681c9d12f32ab439ea00a34a0685a31ea29d2453dee3e9cb3cd75b97b89d65f0cb4764e45a732f43d7ced815b
+debian.mirror.rafal.ca/debian/pool/main/c/ca-certificates/ca-certificates_20210119_all.deb:
+    statuscode: 200
+    contenttype: application/x-debian-package
+    contentlength: 158288
+    sha256: b2d488ad4d8d8adb3ba319fc9cb2cf9909fc42cb82ad239a26c570a2e749c389
+    shake256: 812411eca0851cd1d6e53a2535ff331da9aa47d0c6dc4a6798405489602723b58bc961feae24ddf6a5a28d1daca43739574c5c44346f9ff84cb65222a7913b03
+debian.mirror.rafal.ca/debian/pool/main/c/curl/curl_7.74.0-1.3+b1_amd64.deb:
+    statuscode: 200
+    contenttype: application/x-debian-package
+    contentlength: 267192
+    sha256: 6d348b9e3ab65f27276e5591995129e8c0e3d14ee084292abc6e74c459063725
+    shake256: 708b4a000d01933ffd9e18fcb88af519f6f40a7c6a86c0492857474583ca8e8262fd59fdd0a2f0308bf6278c5fc98dea9a0a0fcb3db365c1ab1e9bd3a043d955
+debian.mirror.rafal.ca/debian/pool/main/c/curl/libcurl4_7.74.0-1.3+b1_amd64.deb:
+    statuscode: 200
+    contenttype: application/x-debian-package
+    contentlength: 341228
+    sha256: 4e1375d61363d292d89a1528a2dd43de23dfc2c1ae984b121ef24fe5ba2cd7c1
+    shake256: b2ff836212f5b0990e6e28b2a240bc21d7210304d8d9939eed30f70a331ffe023dbffecb5be0014e1ff757055f26d8d40d1ec45575b8aefb8d15a280efa49b98
+debian.mirror.rafal.ca/debian/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.27+dfsg-2.1_amd64.deb:
+    statuscode: 200
+    contenttype: application/x-debian-package
+    contentlength: 105900
+    sha256: ef69559746c4491d0d3bf714ae15bce1fd3d13eb72f841ccd753133832c42298
+    shake256: ffff58b7d118cd3881a237e2741f2a44eaf6efa04e56060edee85aefd80d88d6dfea3fa800f3bc15507f583426b7909236360c797787d07b7b94029ce6e8b3cb
+debian.mirror.rafal.ca/debian/pool/main/c/cyrus-sasl2/libsasl2-modules-db_2.1.27+dfsg-2.1_amd64.deb:
+    statuscode: 200
+    contenttype: application/x-debian-package
+    contentlength: 69052
+    sha256: 155806d63243f7c783a925730957d011b191f2d863dce97c4399217f876992b2
+    shake256: f519bbaaeebe12dc3ad7f77d85032b8b2e11770861e6426065712361026a68382450ab237ee3b2e59bf70933fcae2879a91fce6f19b4ed3e934b39be02a6bff8
+debian.mirror.rafal.ca/debian/pool/main/c/cyrus-sasl2/libsasl2-modules_2.1.27+dfsg-2.1_amd64.deb:
+    statuscode: 200
+    contenttype: application/x-debian-package
+    contentlength: 103700
+    sha256: 2e3230d9ab85eef8dfb049d977600eda11b5d30d99bc3f0be6c413d8edac99b9
+    shake256: ed502acc1a895670d051a6481dd6d760b3af901052dc7641f11c709fb621514f6fec7791251e8e70461c9b1d631d743a5b03b9a1c503fb81dccc5731cbf5e15d
+debian.mirror.rafal.ca/debian/pool/main/libp/libpsl/libpsl5_0.21.0-1.2_amd64.deb:
+    statuscode: 200
+    contenttype: application/x-debian-package
+    contentlength: 57324
+    sha256: d716f5b4346ec85bb728f4530abeb1da4a79f696c72d7f774c59ba127c202fa7
+    shake256: 5f9c44a6e9283d6e354b1f14e1563af80108d7e0299a5a14e7a2d16c964a4cb692903f36f238e1002b1143a029dba402956e20b07849926d65f8786b0bb4d352
+debian.mirror.rafal.ca/debian/pool/main/libs/libssh2/libssh2-1_1.9.0-2_amd64.deb:
+    statuscode: 200
+    contenttype: application/x-debian-package
+    contentlength: 155612
+    sha256: f730fe45716a206003597819ececeeffe0fff754bdbbd0105425a177aa20a2de
+    shake256: bf48b691532ffbd625fe8ac4e28af15d2b90992b41280607716decb548377551e82d375138caf6fa690642251261de0ff5bcf375dca77bc52767b7627f71f50c
+debian.mirror.rafal.ca/debian/pool/main/n/nghttp2/libnghttp2-14_1.43.0-1_amd64.deb:
+    statuscode: 200
+    contenttype: application/x-debian-package
+    contentlength: 77120
+    sha256: a1a8aae24ced43025c94a9cb0c0eabfb3fc070785de9ee51c9a3a4fe86f0d11e
+    shake256: e0977b1e06bcbdcc42ad667fca9b9ffbf5a763273e3b646b0ce4b3aefe2db88fba733b73af15de48fc5324a1bba81a1a6d6fa1c60e42971cea600b25816d498b
+debian.mirror.rafal.ca/debian/pool/main/o/openldap/libldap-2.4-2_2.4.57+dfsg-3_amd64.deb:
+    statuscode: 200
+    contenttype: application/x-debian-package
+    contentlength: 231968
+    sha256: 4186d0d3f086202d391da49d1bb5ced6dde5eafba1dbcffef9a8e1238a7ef7c3
+    shake256: 52514fad59b9c84b51e236c0066f3afc25afd52715c84c8695c28a1caa1c8b6d80d5299579481ea86774e92e599bb0bde5a7c5481adadf47377f39302b2f48a0
+debian.mirror.rafal.ca/debian/pool/main/o/openldap/libldap-common_2.4.57+dfsg-3_all.deb:
+    statuscode: 200
+    contenttype: application/x-debian-package
+    contentlength: 95852
+    sha256: 07f52e4fc150e78c290a5ea32471c520ba2252e427a3d75f2f8413f5cce9357e
+    shake256: 89c2b193ed7d7ca9e282078f3da1163799f5727675ca4a9c1868eb9d2ffd2ac52eef8e9fed60d2fca02d805272c72f321345ceb7d972b2c4150083f26c7f245d
+debian.mirror.rafal.ca/debian/pool/main/p/publicsuffix/publicsuffix_20210108.1309-1_all.deb:
+    statuscode: 200
+    contenttype: application/x-debian-package
+    contentlength: 121276
+    sha256: c8fd5aa501c8b90ee8ecde5365e8f3f6bf45472d7a774762879da3c5e7ccf5f0
+    shake256: 9fc70cd2115c48732bb884898aaab65934c596e752acd9b507bc92b35a4aaf69be348ba4466a7cda28dc0f8574be046e650765b3af2c7eaef915fabfcc364518
+debian.mirror.rafal.ca/debian/pool/main/r/rtmpdump/librtmp1_2.4+20151223.gitfa8646d.1-2+b2_amd64.deb:
+    statuscode: 200
+    contenttype: application/x-debian-package
+    contentlength: 60824
+    sha256: e1f69020dc2c466e421ec6a58406b643be8b5c382abf0f8989011c1d3df91c87
+    shake256: fd84d2d9791677cc898dcb82f28b6f315c004e276d5180e03a5cf2a0e486731ccd1f33aff19a7628c16e23ab0b642b35585db3730acac199b40cbd13fded770c
+debian.mirror.rafal.ca/debian/pool/main/t/tzdata/tzdata_2021a-1+deb11u1_all.deb:
+    statuscode: 200
+    contenttype: application/x-debian-package
+    contentlength: 284348
+    sha256: adc4d028dcecf95cfc9f39e734853c161ced198fa4f3cdae42b4af0f923682c4
+    shake256: 4067fc61320acf486b2fec3cfae049d903a7f9225c7ed4948581be7c791d7af4bdb4c9bf04c4c93fbf235b246385fddfc46b4552d94f5062cfdd65e2e132e1c1
