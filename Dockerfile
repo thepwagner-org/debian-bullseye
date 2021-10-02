@@ -5,6 +5,7 @@ COPY sources.list /etc/apt/sources.list
 RUN apt-get -q update && \
   apt-get dist-upgrade -y && \
   apt-get install -y curl && \
-  (curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -) && \
+  (curl -fsSL https://deb.nodesource.com/setup_16.x | bash -) && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
