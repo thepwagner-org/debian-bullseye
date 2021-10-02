@@ -1,0 +1,36 @@
+deb.nodesource.com/gpgkey/nodesource.gpg.key:
+    responseCode: 200
+    contentType: text/plain
+    contentLength: 3128
+    sha256: 773b328f7b1d6db58a8c6a7fc89e2ed58ac5e06c3ab148411cf8272be7b1c472
+    shake256: 6266c732ad690258ea9527f8813ee3e87c9b211a1c1b8d7e13af2b755b43e69df5883c42ff6040248ec07c8f58b7a0f8c8671ecdbd4ff0320aaf2300d9991f13
+deb.nodesource.com/node_16.x/dists/bullseye/InRelease:
+    responseCode: 200
+    contentType: text/plain
+    contentLength: 4586
+    sha256: 2240486753d28a03386cf0c7c79fde6360c50f7b5ee023eabf91a7eef95b2222
+    shake256: cae7b2530d37274b42d8fd22dfaa569bf84999d28fb749471a03356556f69023bcd9958dc218ec8de290027aa1f1e0a4fc1cb619df9a29af157da8cc6a32a30a
+deb.nodesource.com/node_16.x/dists/bullseye/Release:
+    responseCode: 200
+    contentType: text/plain
+    contentLength: 3704
+    sha256: 17f136f6902aa02f181d56e1f906c6f0a7f0484035d3d7d61facd2e80ed77f6c
+    shake256: 7aa3f19bed931672fe1996c944ffab6ac43093c91ec7869ed9933915e33dd375bf0cc1ea57abb464f551639e5749c15ffa60c687a43c5fc2a299486e16ce22fe
+deb.nodesource.com/node_16.x/dists/bullseye/main/binary-amd64/Packages.gz:
+    responseCode: 200
+    contentType: text/html
+    contentLength: 771
+    sha256: 5dfc2367ee06cf1bb753b682d6652bb583b4f8a355cbf8ef3cef8a9be918af15
+    shake256: 47ee01f7b4af0d2df52bc411eab8ed76894514f88fe37b0b86e1558843b192c7e7bc9b8415f98b54e6188f7cc00ddd4e0b75fdf7a2ba1a8759005df50e22df67
+deb.nodesource.com/node_16.x/pool/main/n/nodejs/nodejs_16.10.0-deb-1nodesource1_amd64.deb:
+    responseCode: 200
+    contentType: application/octet-stream
+    contentLength: 26233360
+    sha256: aa6757289f1ec27a4bda40df4452f269d4a85c9053029b5d00a2da5d9c8a45c1
+    shake256: 9b64572bf52dc527217e7f3262c0ffc06407ea6763dfbbaa6540088a6027d4cc117f26023c09abb288c29c84a873b12d27d41cc1c3b4a7963d2d2bc68847277d
+deb.nodesource.com/setup_16.x:
+    responseCode: 200
+    contentType: text/plain
+    contentLength: 13764
+    sha256: 22e2048e76f0b0dd5e126cb816e59665ca4b402ffe9bb542005ad661b36a9eb6
+    shake256: aee2aad7b48659b8e12093aea05630acfa5c0ad7694d0149f8f7999d92deafa3d8223c15c6a878fd327f4c1057b89f6031aaa9b5fa78adf231f7b6eadc8b4ee1
