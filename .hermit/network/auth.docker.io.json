@@ -1,9 +1,0 @@
-{
-  "auth.docker.io/token": {
-    "responseCode": 200,
-    "contentType": "application/json",
-    "contentLength": 4363,
-    "sha256": "83cbd6dc0807c04adc66c7ce7ce6e2b0054a0c0d3bba1e8cfea596bc04f12575",
-    "shake256": "0de1d3f479c158a2815fbfba29a4a30ec724d7adc75292ef9c3262091770dcb1184573e650900488d8be49c0e5aea1af8529bb9fd390ddd4e557eab6bdef5021"
-  }
-}
