@@ -1,8 +1,13 @@
 debian.mirror.rafal.ca/debian-security/dists/bullseye-security/InRelease:
     responseCode: 200
     contentLength: 44101
-    sha256: d6cfcb9590a420cdae276c00896e4122aa3b60d973c1f28c57e47ad9c6fefa0e
-    shake256: 9baf94dd0080fbfb0cd75c7d2a988180fca573c072f1506ab592c6440853172c6cdca9bfa2a77c797fac292b44eeb546b983ac4b98644911fcfca45b2d9fafbc
+    sha256: 447982c605dadfb63549de3793af67317fcbfdbc5b95f16101cf65aa3ca5f100
+    shake256: 7eef22395d693655cbb6e25c2e070b0ed5758d72ae6f403014ce36ce63c391ec604d0a0c4ed5c159a96b9c12d3e1e275d75c24f2c45560753bc3536151764ab3
+? debian.mirror.rafal.ca/debian-security/dists/bullseye-security/main/binary-amd64/by-hash/SHA256/286655faf6380ce415772064ffbaea62eadf4ea3f644a060da0d5ee1c728e097
+:   responseCode: 200
+    contentLength: 44156
+    sha256: 286655faf6380ce415772064ffbaea62eadf4ea3f644a060da0d5ee1c728e097
+    shake256: c462b1d9a5955d9803ce8e86acd234bffd3c996109b3323b96142f5547a018dc4b17989126cded15b37261233775ca6f1d537799390ac08cfa715afb002b0c4a
 ? debian.mirror.rafal.ca/debian-security/dists/bullseye-security/main/binary-amd64/by-hash/SHA256/da870dd76c3fec92c85f69be957e011f75a90f01c8e11f5e8a9ea666dce84853
 :   responseCode: 200
     contentLength: 41508
@@ -11,8 +16,8 @@ debian.mirror.rafal.ca/debian-security/dists/bullseye-security/InRelease:
 debian.mirror.rafal.ca/debian/dists/bullseye-updates/InRelease:
     responseCode: 200
     contentLength: 39353
-    sha256: 8087726d3f863209cc165dbfea3b0ce1d45a8ba3721052417dab754045939410
-    shake256: 9780578844e2ca01c78ae3b75b70345b5b892b92ecd5955bc201fe43df724cccd2d3cb7cef85dbfaba2c6e7527af1e944b4a3475bd26397c1550857dadd51a46
+    sha256: 85e487dd2ae1631dd3d76de0ddfa29961e0d3d19c58fb951fa3cf9c3455e6ffd
+    shake256: 33b67bd781b9dd44ac1ac2f85a64aa58c3ec2efad347824f870e779ddd3d9b0185d58c12f710031e4aa4882909fb2e325e01dadda75a22e338711afd49126fd3
 ? debian.mirror.rafal.ca/debian/dists/bullseye-updates/main/binary-amd64/by-hash/SHA256/942f49679a50f19ca65a74ae199c161659d505b9aca8bdfa62dfe9af74d468fd
 :   responseCode: 200
     contentLength: 2300
