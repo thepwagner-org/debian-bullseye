@@ -7,3 +7,5 @@ rules:
   action: REFRESH
 - pattern: "debian.mirror.rafal.ca/debian.*"
   action: ALLOW
+- pattern: "deb.nodesource.com/.*"
+  action: ALLOW
