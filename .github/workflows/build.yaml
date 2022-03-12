@@ -1,14 +1,40 @@
 name: Build
 on: push
 
+env:
+  IMAGE_REPO: ghcr.io/thepwagner-org/debian-bullseye
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: docker build -t ${{github.repository}}:${{github.sha}} .
-      - uses: anchore/sbom-action@v0
-        continue-on-error: true
+
+      # Always run Syft
+      - uses: anchore/sbom-action/download-syft@ce4a7cf05d7b684693d7b6bba97bfbee56806edb # v0.7.0
+      - run: syft packages -o spdx-json=sbom.spdx.json ${{github.repository}}:${{github.sha}}
+      - uses: actions/upload-artifact@v3
         with:
-          image: ${{github.repository}}:${{github.sha}}
-          artifact-name: sbom.spdx.json
+          name: spdx-json
+          path: sbom.spdx.json
+
+      # TODO: On PRs, run Grype and report the result?
+      
+      # On master, push the image and SBOM
+      - uses: docker/login-action@v1
+        if: ${{ github.ref == "refs/heads/master" }}
+        with:
+          registry: ghcr.io
+          username: ${{github.repository_owner}}
+          password: ${{secrets.GITHUB_TOKEN}}
+      - if: ${{ github.ref == "refs/heads/master" }}
+        run: |
+          docker tag ${{github.repository}}:${{github.sha}} ${{env.IMAGE_REPO}}:latest
+          docker push ${{env.IMAGE_REPO}}:latest
+
+          # Upload SBOM
+          MANIFEST_DIGEST=$(docker inspect --format='{{index .RepoDigests 0}}' ${{env.IMAGE_REPO}}:latest | sed -e 's/.*@//g')
+          SBOM_TAG=$(echo $MANIFEST_DIGEST | sed -e 's/:/_/g').spdx.json
+          oras push ${{env.IMAGE_REPO}}:${SBOM_TAG} \
+              ./sbom.spdx.json:application/spdx+json
