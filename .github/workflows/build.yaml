@@ -6,9 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: docker build -t ${GITHUB_REPOSITORY}:${GITHUB_SHA} .
+      - run: docker build -t ${{github.repository}}:${{github.sha}} .
       - uses: anchore/sbom-action@v0
         continue-on-error: true
         with:
-          image: ${GITHUB_REPOSITORY}:${GITHUB_SHA}
+          image: ${{github.repository}}:${{github.sha}}
           artifact-name: sbom.spdx.json
