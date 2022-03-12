@@ -8,7 +8,7 @@ env:
   IMAGE_REPO: ghcr.io/thepwagner-org/debian-bullseye
 
 permissions:
-  contents: write
+  contents: write 
   actions: write
 
 jobs:
@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@a12a3943b4bdde767164f792f33f40b04645d846 # tag=v3
+        with:
+          persist-credentials: false
       - run: docker build -t ${{env.IMAGE_REPO}}:${{github.sha}} .
 
       - uses: anchore/sbom-action/download-syft@ce4a7cf05d7b684693d7b6bba97bfbee56806edb # v0.7.0
@@ -37,6 +39,5 @@ jobs:
           git config user.email "70587923+wapwagner@users.noreply.github.com"
           git add Dockerfile.spdx.json
           git commit -m'generated SBOM'
-          git push
-
+          git push "https://wapwagner:${{ secrets.WAPWAGNER_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
           exit 1
