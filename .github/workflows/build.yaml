@@ -15,22 +15,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@a12a3943b4bdde767164f792f33f40b04645d846 # tag=v3
+      - name: "🌎 Fetching code"
+        uses: actions/checkout@a12a3943b4bdde767164f792f33f40b04645d846 # tag=v3
         with:
           persist-credentials: false
-      - run: docker build -t ${{env.IMAGE_REPO}}:${{github.sha}} .
+      - name: "🚧 Building image"
+        run: docker build -t ${{env.IMAGE_REPO}}:${{github.sha}} .
 
-      - uses: anchore/sbom-action/download-syft@ce4a7cf05d7b684693d7b6bba97bfbee56806edb # v0.7.0
-      - run: syft packages -o spdx-json=sbom.spdx.json ${{env.IMAGE_REPO}}:${{github.sha}}
-      - uses: actions/upload-artifact@v3
+      - name: "🕵️ Setup Syft"
+        uses: anchore/sbom-action/download-syft@ce4a7cf05d7b684693d7b6bba97bfbee56806edb # v0.7.0
+      - name: "🕵️ Generate SBOM"
+        run: syft packages -o spdx-json=sbom.spdx.json ${{env.IMAGE_REPO}}:${{github.sha}}
+      - name: "🕵️ Upload SBOM"
+        uses: actions/upload-artifact@v3
         with:
           name: spdx-json
           path: sbom.spdx.json
 
-      - run: |
+      - name: "👮 Verify SBOM"
+        run: |
           # Exit if packages match the committed SBOM
           BUILT_PACKAGES=$(jq -c .packages sbom.spdx.json | sha512sum)
-          STORED_PACKAGES=$(jq .packages Dockerfile.spdx.json | sha512sum)
+          STORED_PACKAGES=$(jq -c .packages Dockerfile.spdx.json | sha512sum)
           [ "${BUILT_PACKAGES}" = "${STORED_PACKAGES}" ] && exit 0
 
           # On mismatch, commit and push an update:
