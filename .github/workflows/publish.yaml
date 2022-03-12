@@ -47,5 +47,5 @@ jobs:
           printf "Stored packages:\n%s\n" "$STORED_PACKAGES"
           [ "$(echo ${BUILT_PACKAGES} | sha512sum)" = "$(echo ${STORED_PACKAGES} | sha512sum)" ] || exit 1
 
-          docker push tag ghcr.io/thepwagner-org/debian-bullseye:${{github.sha}} ghcr.io/thepwagner-org/debian-bullseye:latest
+          docker tag ghcr.io/thepwagner-org/debian-bullseye:${{github.sha}} ghcr.io/thepwagner-org/debian-bullseye:latest
           docker push ghcr.io/thepwagner-org/debian-bullseye:latest
