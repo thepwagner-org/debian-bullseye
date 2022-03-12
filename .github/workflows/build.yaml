@@ -24,3 +24,11 @@ jobs:
         with:
           name: spdx-json
           path: sbom.spdx.json
+
+      - run: |
+          BUILT_PACKAGES=$(jq -c .packages sbom.spdx.json | sha512sum)
+          STORED_PACKAGES=$(jq .packages Dockerfile.spdx.json | sha512sum)
+
+          [ "${BUILT_PACKAGES}" = "${STORED_PACKAGES}" ] && exit 0
+
+          echo "Packages mismatch"
