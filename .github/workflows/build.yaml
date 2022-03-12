@@ -1,0 +1,14 @@
+name: Build
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: docker build -t ${GITHUB_REPOSITORY}:${GITHUB_SHA} .
+      - uses: anchore/sbom-action@v0
+        continue-on-error: true
+        with:
+          image: ${GITHUB_REPOSITORY}:${GITHUB_SHA}
+          artifact-name: sbom.spdx.json
