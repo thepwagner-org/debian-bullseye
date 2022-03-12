@@ -13,7 +13,7 @@ jobs:
       - run: docker build -t ${{github.repository}}:${{github.sha}} .
 
       # Always run Syft
-      - uses: anchore/sbom-action/download-syft@ce4a7cf05d7b684693d7b6bba97bfbee56806edb # v0.7.0
+      - uses: anchore/sbom-action/download-syft@ce4a7cf05d7b684693d7b6bba97bfbee56806edb
       - run: syft packages -o spdx-json=sbom.spdx.json ${{github.repository}}:${{github.sha}}
       - uses: actions/upload-artifact@v3
         with:
