@@ -40,9 +40,12 @@ jobs:
       - name: "👮 Verify SBOM"
         run: |
           # Exit if packages match the committed SBOM
-          BUILT_PACKAGES=$(jq -c .packages sbom.spdx.json | sha512sum)
-          STORED_PACKAGES=$(jq -c .packages Dockerfile.spdx.json | sha512sum)
-          [ "${BUILT_PACKAGES}" = "${STORED_PACKAGES}" ] && exit 0
+          BUILT_PACKAGES=$(jq -r '.packages[].externalRefs[] | select(.referenceType=="purl") .referenceLocator' sbom.spdx.json | sort)
+          printf "Built packages:\n%s\n" "$BUILT_PACKAGES"
+          
+          STORED_PACKAGES=$(jq -r '.packages[].externalRefs[] | select(.referenceType=="purl") .referenceLocator' Dockerfile.spdx.json| sort)
+          printf "Stored packages:\n%s\n" "$STORED_PACKAGES"
+          [ "$(echo ${BUILT_PACKAGES} | sha512sum)" = "$(echo ${STORED_PACKAGES} | sha512sum)" ] && exit 0
 
           # On mismatch, commit and push an update:
           mv sbom.spdx.json Dockerfile.spdx.json
