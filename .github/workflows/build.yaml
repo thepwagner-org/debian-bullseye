@@ -19,7 +19,7 @@ jobs:
       - run: docker build -t ${{env.IMAGE_REPO}}:${{github.sha}} .
 
       - uses: anchore/sbom-action/download-syft@ce4a7cf05d7b684693d7b6bba97bfbee56806edb # v0.7.0
-      - run: syft packages -o spdx-json=sbom.spdx.json ${{github.repository}}:${{github.sha}}
+      - run: syft packages -o spdx-json=sbom.spdx.json ${{env.IMAGE_REPO}}:${{github.sha}}
       - uses: actions/upload-artifact@v3
         with:
           name: spdx-json
