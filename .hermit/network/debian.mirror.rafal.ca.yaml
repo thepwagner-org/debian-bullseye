@@ -1,18 +1,18 @@
 debian.mirror.rafal.ca/debian-security/dists/bullseye-security/InRelease:
     responseCode: 200
     contentLength: 44101
-    sha256: aaa449b7008119c4eeb4848d29bf1ec9e267871f6ad0fd0d5c54aa1525b9618d
-    shake256: 097bb78847ec0c771c7b200f1b4b6da7394b0ccfd45b9cd94df971ffeca3452145433a4a1284b831b59a275cbaf89e51bbc6e868d2115d34198d77ece413afd7
-? debian.mirror.rafal.ca/debian-security/dists/bullseye-security/main/binary-amd64/by-hash/SHA256/b084bf5c74fbd64dafdfb3f602102b9fde001997af1f748cbc5a014ca96974a7
+    sha256: 5b85754010cab4ef5f5a336dd425fbea363218001378188f8ff7f549ef466892
+    shake256: 6d28ad3946bf4cc37a6052b853134ab96ec29a2e7129721b2c75b7d51817baecb656cf3e398ef510a3f80d2466dca860deb08f3b1b2147cd622bc187d45a0a90
+? debian.mirror.rafal.ca/debian-security/dists/bullseye-security/main/binary-amd64/by-hash/SHA256/7cb0b4ca3ab2da80506ca0e3a60e6f5327f91e0ee51da32957f16f89389d1e70
 :   responseCode: 200
-    contentLength: 120172
-    sha256: b084bf5c74fbd64dafdfb3f602102b9fde001997af1f748cbc5a014ca96974a7
-    shake256: 66310ea93cfe624d19da3408b72cc7fa026b94d7a47e39b6efe741e920efafc53ee8660d9695c1d16a23231aa48fb504703b4efa48ea081375e58b485a2507da
+    contentLength: 122124
+    sha256: 7cb0b4ca3ab2da80506ca0e3a60e6f5327f91e0ee51da32957f16f89389d1e70
+    shake256: 4f259f108b02e842cd66da91db83f7440495c6e2ca724ba38e62f1aff1f3027345b4bece28053609bc01c9b52fbe786c5796425ea8f592b0f440d7c67563a1fc
 debian.mirror.rafal.ca/debian/dists/bullseye-updates/InRelease:
     responseCode: 200
     contentLength: 39353
-    sha256: e8384fe7abd8cae4dfbbec91a860428bed47eb2e58686d06bb13998de24df985
-    shake256: b63f99e38829496726b47ff6fa0c15c6795159578d67023f536033ba1d5fcebc2747d9f34c615b70d9360b5f02db2f3c7a9dbdaca32198a5c4546fe79212441d
+    sha256: 2db9098e03f262f81fdf35b019637a605b1e37142916ff701b75c0c2ee428f5f
+    shake256: 3627177bf1bb6deaede406a04de032cc3e4aff9df0961aca1b5496da5eb91f00feb71620fb4a82a2fef8ed4deec6b0b0f2978db69d3f89c7769c8ba283ab3e92
 ? debian.mirror.rafal.ca/debian/dists/bullseye-updates/main/binary-amd64/by-hash/SHA256/1b157e478f2893e776e86182c487e8a90a88337420e433d617d516f3d44aaa4e
 :   responseCode: 200
     contentLength: 2596
