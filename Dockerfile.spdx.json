@@ -156,29 +156,6 @@
    "versionInfo": "3.5.51"
   },
   {
-   "SPDXID": "SPDXRef-b4057918a1afb8ea",
-   "name": "bash",
-   "licenseConcluded": "GPL-3.0",
-   "downloadLocation": "NOASSERTION",
-   "externalRefs": [
-    {
-     "referenceCategory": "SECURITY",
-     "referenceLocator": "cpe:2.3:a:bash:bash:5.1-2\\+b3:*:*:*:*:*:*:*",
-     "referenceType": "cpe23Type"
-    },
-    {
-     "referenceCategory": "PACKAGE_MANAGER",
-     "referenceLocator": "pkg:deb/debian/bash@5.1-2+b3?arch=amd64&upstream=bash@5.1-2&distro=debian-11",
-     "referenceType": "purl"
-    }
-   ],
-   "filesAnalyzed": false,
-   "licenseDeclared": "GPL-3.0",
-   "originator": "Person: Matthias Klose <doko@debian.org>",
-   "sourceInfo": "acquired package info from DPKG DB: /var/lib/dpkg/status, /var/lib/dpkg/info/bash.md5sums, /var/lib/dpkg/info/bash.conffiles, /usr/share/doc/bash/copyright",
-   "versionInfo": "5.1-2+b3"
-  },
-  {
    "SPDXID": "SPDXRef-64e966535ef69933",
    "name": "bsdutils",
    "licenseConcluded": "BSD-2-Clause AND BSD-3-Clause AND BSD-4-Clause AND GPL-2.0 AND GPL-2.0+ AND GPL-3.0 AND GPL-3.0+ AND LGPL-2.0 AND LGPL-2.0+ AND LGPL-2.1 AND LGPL-2.1+ AND LGPL-3.0 AND LGPL-3.0+ AND MIT",
