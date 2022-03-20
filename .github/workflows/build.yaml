@@ -1,12 +1,12 @@
 name: Build
 on:
-  push:
-    branches-ignore:
-      - main
+  pull_request:
+    types: [opened, reopened, synchronize]
 
 permissions:
   contents: write 
   actions: write
+  pull-requests: write
 
 jobs:
   build:
@@ -41,17 +41,36 @@ jobs:
         run: |
           # Exit if packages match the committed SBOM
           BUILT_PACKAGES=$(jq -r '.packages[].externalRefs[] | select(.referenceType=="purl") .referenceLocator' sbom.spdx.json | sort)
-          printf "Built packages:\n%s\n" "$BUILT_PACKAGES"
+          echo "Built packages"
+          echo "$BUILT_PACKAGES" | tee built.txt
+          echo ""
+          echo ""
+          echo ""
           
           STORED_PACKAGES=$(jq -r '.packages[].externalRefs[] | select(.referenceType=="purl") .referenceLocator' Dockerfile.spdx.json| sort)
-          printf "Stored packages:\n%s\n" "$STORED_PACKAGES"
+          echo "Stored packages:"
+          echo "$STORED_PACKAGES" | tee stored.txt
           [ "$(echo ${BUILT_PACKAGES} | sha512sum)" = "$(echo ${STORED_PACKAGES} | sha512sum)" ] && exit 0
 
+          (diff -U 0 stored.txt built.txt || true) > pkgdiff.txt
+
           # On mismatch, commit and push an update:
+          git reset origin/${GITHUB_HEAD_REF}
           mv sbom.spdx.json Dockerfile.spdx.json
           git config user.name "wa thepwagner"
           git config user.email "70587923+wapwagner@users.noreply.github.com"
           git add Dockerfile.spdx.json
           git commit -m'generated SBOM'
-          git push "https://wapwagner:${{ secrets.WAPWAGNER_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
+          git push "https://wapwagner:${{ secrets.WAPWAGNER_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" HEAD:${GITHUB_HEAD_REF}
           exit 1
+      - uses: actions/github-script@v6
+        if: ${{ failure() }}
+        with:
+          script: |
+            const fs = require('fs');
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '```\n' + fs.readFileSync('pkgdiff.txt') + '\n```',
+            });
