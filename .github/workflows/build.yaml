@@ -6,7 +6,6 @@ on:
 permissions:
   contents: write 
   actions: write
-  issues: write
   pull-requests: write
 
 jobs:
@@ -56,6 +55,7 @@ jobs:
           (diff -U 0 stored.txt built.txt || true) > pkgdiff.txt
 
           # On mismatch, commit and push an update:
+          git reset origin/${GITHUB_HEAD_REF}
           mv sbom.spdx.json Dockerfile.spdx.json
           git config user.name "wa thepwagner"
           git config user.email "70587923+wapwagner@users.noreply.github.com"
