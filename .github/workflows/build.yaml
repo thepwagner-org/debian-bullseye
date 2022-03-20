@@ -46,6 +46,10 @@ jobs:
           STORED_PACKAGES=$(jq -r '.packages[].externalRefs[] | select(.referenceType=="purl") .referenceLocator' Dockerfile.spdx.json| sort)
           printf "Stored packages:\n%s\n" "$STORED_PACKAGES"
           [ "$(echo ${BUILT_PACKAGES} | sha512sum)" = "$(echo ${STORED_PACKAGES} | sha512sum)" ] && exit 0
+          
+          echo "$STORED_PACKAGES" > stored.txt
+          echo "$BUILT_PACKAGES" > built.txt
+          diff -U 0 stored.txt built.txt > pkgdiff.txt
 
           # On mismatch, commit and push an update:
           mv sbom.spdx.json Dockerfile.spdx.json
@@ -55,3 +59,14 @@ jobs:
           git commit -m'generated SBOM'
           git push "https://wapwagner:${{ secrets.WAPWAGNER_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
           exit 1
+      - uses: actions/github-script@v6
+        if: ${{ failure() }}
+        with:
+          script: |
+            const fs = require('fs');
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '```\n' + fs.readFileSync('pkgdiff.txt') + '\n```',
+            });
