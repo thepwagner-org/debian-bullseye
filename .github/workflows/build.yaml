@@ -61,7 +61,7 @@ jobs:
           git config user.email "70587923+wapwagner@users.noreply.github.com"
           git add Dockerfile.spdx.json
           git commit -m'generated SBOM'
-          git push "https://wapwagner:${{ secrets.WAPWAGNER_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git"
+          git push "https://wapwagner:${{ secrets.WAPWAGNER_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" HEAD:${{ github.ref_name }}
           exit 1
       - uses: actions/github-script@v6
         if: ${{ failure() }}
