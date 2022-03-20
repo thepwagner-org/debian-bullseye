@@ -1,9 +1,9 @@
 {
  "SPDXID": "SPDXRef-DOCUMENT",
- "name": "ghcr.io/thepwagner-org/debian-bullseye-86d4092b0c471bc70b803554a9b5e3ba5fb23d94",
+ "name": "ghcr.io/thepwagner-org/debian-bullseye-9a7a0d4cdf178cbfcf62f5565f878bfabe515231",
  "spdxVersion": "SPDX-2.2",
  "creationInfo": {
-  "created": "2022-03-17T11:02:49.612129202Z",
+  "created": "2022-03-20T21:41:04.834723399Z",
   "creators": [
    "Organization: Anchore, Inc",
    "Tool: syft-0.40.1"
@@ -11,7 +11,7 @@
   "licenseListVersion": "3.16"
  },
  "dataLicense": "CC0-1.0",
- "documentNamespace": "https://anchore.com/syft/image/ghcr.io/thepwagner-org/debian-bullseye-86d4092b0c471bc70b803554a9b5e3ba5fb23d94-99e4d761-b6e8-4dc2-abb9-4ab5bb4c3aa7",
+ "documentNamespace": "https://anchore.com/syft/image/ghcr.io/thepwagner-org/debian-bullseye-9a7a0d4cdf178cbfcf62f5565f878bfabe515231-23707267-9c8d-48d6-b6d0-aba66ecbbb0f",
  "packages": [
   {
    "SPDXID": "SPDXRef-586b2fda5cdde736",
@@ -154,6 +154,29 @@
    "originator": "Person: Colin Watson <cjwatson@debian.org>",
    "sourceInfo": "acquired package info from DPKG DB: /var/lib/dpkg/status, /var/lib/dpkg/info/base-passwd.md5sums, /usr/share/doc/base-passwd/copyright",
    "versionInfo": "3.5.51"
+  },
+  {
+   "SPDXID": "SPDXRef-a600d4466fec124e",
+   "name": "bash",
+   "licenseConcluded": "GPL-3.0",
+   "downloadLocation": "NOASSERTION",
+   "externalRefs": [
+    {
+     "referenceCategory": "SECURITY",
+     "referenceLocator": "cpe:2.3:a:bash:bash:5.1-2\\+b3:*:*:*:*:*:*:*",
+     "referenceType": "cpe23Type"
+    },
+    {
+     "referenceCategory": "PACKAGE_MANAGER",
+     "referenceLocator": "pkg:deb/debian/bash@5.1-2+b3?arch=amd64&upstream=bash@5.1-2&distro=debian-11",
+     "referenceType": "purl"
+    }
+   ],
+   "filesAnalyzed": false,
+   "licenseDeclared": "GPL-3.0",
+   "originator": "Person: Matthias Klose <doko@debian.org>",
+   "sourceInfo": "acquired package info from DPKG DB: /var/lib/dpkg/status, /var/lib/dpkg/info/bash.md5sums, /var/lib/dpkg/info/bash.conffiles, /usr/share/doc/bash/copyright",
+   "versionInfo": "5.1-2+b3"
   },
   {
    "SPDXID": "SPDXRef-d7850d460a8ff99e",
