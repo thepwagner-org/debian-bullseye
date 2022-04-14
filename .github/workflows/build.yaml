@@ -13,3 +13,4 @@ jobs:
     uses: thepwagner-org/actions/.github/workflows/build.yaml@main
     secrets:
       not_github_token: ${{secrets.WAPWAGNER_TOKEN}}
+
