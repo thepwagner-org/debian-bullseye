@@ -9,6 +9,6 @@ permissions:
 
 jobs:
   build:
-    uses: thepwagner-org/.github/.github/workflows/build.yaml@main
+    uses: thepwagner-org/actions/.github/workflows/build.yaml@main
     with:
       image: meow
