@@ -12,3 +12,5 @@ jobs:
     uses: thepwagner-org/actions/.github/workflows/build.yaml@main
     with:
       image: meow
+    secrets:
+      not_github_token: ${{secrets.WAPWAGNER_TOKEN}}
