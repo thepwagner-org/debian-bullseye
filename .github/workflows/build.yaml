@@ -8,9 +8,8 @@ permissions:
   pull-requests: write
 
 jobs:
-  reusable_workflow_job:
+  build:
     runs-on: ubuntu-latest
-    environment: production
     steps:
       - uses: thepwagner-org/.github/.github/workflows/build.yaml@main
         with:
