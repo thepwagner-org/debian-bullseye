@@ -1,7 +1,6 @@
 name: Build
 on:
-  pull_request:
-    types: [opened, reopened, synchronize]
+  push:
 
 permissions:
   contents: write 
@@ -13,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
-      - uses: thepwagner-org/.github/.github/workflows/my-action.yml@main
+      - uses: thepwagner-org/.github/.github/workflows/build.yaml@main
         with:
           image: meow
