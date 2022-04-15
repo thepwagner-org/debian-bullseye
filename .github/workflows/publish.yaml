@@ -10,6 +10,6 @@ permissions:
 
 jobs:
   publish:
-    uses: thepwagner-org/actions/.github/workflows/build.yaml@v1.0.2
+    uses: thepwagner-org/actions/.github/workflows/build.yaml@main
     secrets:
       token: ${{secrets.WAPWAGNER_TOKEN}}
