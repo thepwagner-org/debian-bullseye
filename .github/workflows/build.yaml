@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   build:
-    uses: thepwagner-org/actions/.github/workflows/build.yaml@main
+    uses: thepwagner-org/actions/.github/workflows/build.yaml@v1.0.0
     secrets:
       not_github_token: ${{secrets.WAPWAGNER_TOKEN}}
 
