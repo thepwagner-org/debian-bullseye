@@ -4,12 +4,41 @@ on:
     types: [opened, reopened, synchronize]
 
 permissions:
-  contents: write 
-  actions: write
+  contents: read
+  packages: write
   pull-requests: write
+  id-token: write
 
 jobs:
   build:
-    uses: thepwagner-org/actions/.github/workflows/build.yaml@3d2e2bbbfb76e15d51348dae21130662658d5e36 # tag=v1.0.12
-    secrets:
-      not_github_token: ${{secrets.WAPWAGNER_TOKEN}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: "🌎 Fetching code"
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3.0.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: "🌎 Setup Syft"
+        uses: anchore/sbom-action/download-syft@bb716408e75840bbb01e839347cd213767269d4a # tag=v0.11.0
+      - name: "🌎 Setup Cosign"
+        uses: sigstore/cosign-installer@7e0881f8fe90b25e305bbf0309761e9314607e25 # tag=v2.4.0
+
+      - name: "🌎 Logging in to Docker Registry"
+        uses: docker/login-action@49ed152c8eca782a232dede0303416e8f356c37b # tag=v2.0.0
+        with:
+          registry: ghcr.io
+          username: ${{github.repository_owner}}
+          password: ${{secrets.GITHUB_TOKEN}}
+      - name: "🚧 Building image"
+        run: docker build -t ghcr.io/${{github.repository}}:${{github.sha}} .
+      - name: "📸 Generate SBOM"
+        run: syft packages -o cyclonedx-json=sbom.cyclonedx.json ghcr.io/${{github.repository}}:${{github.sha}}
+
+      - name: "🐳 Pushing image"
+        run: docker push ghcr.io/${{github.repository}}:${{github.sha}}
+      - name: "🔏 Sign image + SBOM"
+        run: |
+          cosign sign --force ghcr.io/${{github.repository}}:${{github.sha}}
+          cosign attest --force --predicate sbom.cyclonedx.json ghcr.io/${{github.repository}}:${{github.sha}}
+        env:
+          COSIGN_EXPERIMENTAL: true
