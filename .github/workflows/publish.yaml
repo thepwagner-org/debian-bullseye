@@ -6,10 +6,11 @@ on:
 
 permissions:
   contents: read
-  actions: read
+  packages: write
+  id-token: write
 
 jobs:
   publish:
-    uses: thepwagner-org/actions/.github/workflows/publish.yaml@3d2e2bbbfb76e15d51348dae21130662658d5e36 # tag=v1.0.12
+    uses: thepwagner-org/actions/.github/workflows/publish.yaml@external-sboms
     secrets:
-      token: ${{secrets.WAPWAGNER_TOKEN}}
+      token: ${{secrets.GITHUB_TOKEN}}
