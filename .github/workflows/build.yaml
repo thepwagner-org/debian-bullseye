@@ -11,6 +11,6 @@ permissions:
 
 jobs:
   build:
-    uses: thepwagner-org/actions/.github/workflows/build.yaml@try-sbom-action-with-vulns
+    uses: thepwagner-org/actions/.github/workflows/build.yaml@renovate/thepwagner-sbom-action-0.x
     secrets:
       token: ${{secrets.GITHUB_TOKEN}}
