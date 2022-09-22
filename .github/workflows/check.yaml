@@ -1,0 +1,14 @@
+name: Check
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  packages: read
+  pull-requests: write
+
+jobs:
+  check:
+    uses: thepwagner-org/actions/.github/workflows/check.yaml@check-for-updates
+    secrets:
+      not_github_token: ${{secrets.WAPWAGNER_TOKEN}}
