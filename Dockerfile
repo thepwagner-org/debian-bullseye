@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim@sha256:b6a622c8242b05bd4dac7d1be3c3febb62ee08de90dd76faaf7936363a18f717
+FROM debian:bullseye-slim@sha256:8eaee63a5ea83744e62d5bf88e7d472d7f19b5feda3bfc6a2304cc074f269269
 
 COPY sources.list /etc/apt/sources.list
 
