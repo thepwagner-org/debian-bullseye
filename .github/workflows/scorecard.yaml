@@ -8,7 +8,8 @@ on:
     branches: main
   workflow_dispatch:
 
-permissions: read-all
+permissions:
+  contents: read
 
 jobs:
   analysis:
@@ -23,11 +24,21 @@ jobs:
         with:
           persist-credentials: false
 
+      - uses: thepwagner/token-action@7064f486c7bd204fc7ab56da53d202d2352a1dba # tag=v0.1.0
+        id: token
+        with:
+          server: 'https://gtfo-yuiafdvuwa-uc.a.run.app'
+          repositories: |
+            - thepwagner-org/debian
+          permissions: |
+            administration: read
+            metadata: read
+            repository_hooks: read
+
       - name: "Run analysis"
         uses: ossf/scorecard-action@08b4669551908b1024bb425080c797723083c031 # v2.2.0
         with:
           results_file: results.sarif
           results_format: sarif
-          # TODO: gtfo?
-          # repo_token: ${{ secrets.SCORECARD_TOKEN }}
+          repo_token: ${{steps.token.outputs.token}}
           publish_results: true
