@@ -11,6 +11,6 @@ permissions:
 
 jobs:
   check:
-    uses: thepwagner-org/actions/.github/workflows/check.yaml@004a11d0b52f514d9907b4c8ddfd814414bb316e # v2.4.0
+    uses: thepwagner-org/actions/.github/workflows/check.yaml@76c5ce4b7042976774cb7b94688a67a3eadef6ee # v2.4.1
     secrets:
       not_github_token: ${{secrets.WAPWAGNER_TOKEN}}
