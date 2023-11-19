@@ -11,6 +11,6 @@ permissions:
 
 jobs:
   build:
-    uses: thepwagner-org/actions/.github/workflows/build.yaml@fix-cosign
+    uses: thepwagner-org/actions/.github/workflows/build.yaml@004a11d0b52f514d9907b4c8ddfd814414bb316e # v2.4.0
     secrets:
       token: ${{secrets.GITHUB_TOKEN}}
